@@ -1,0 +1,22 @@
+{
+  "version": "1",
+  "region": "us-west-2",
+  "userPoolId": "us-west-2_JLdezwX29",
+  "userName": "test99",
+  "callerContext": {
+    "awsSdkVersion": "aws-sdk-java-console",
+    "clientId": "23oiqmj9b82ts8l2esqlsdqciv"
+  },
+  "triggerSource": "PreSignUp_SignUp",
+  "request": {
+    "userAttributes": {
+      "email": "test@jim.com"
+    },
+    "validationData": null
+  },
+  "response": {
+    "autoConfirmUser": false,
+    "autoVerifyEmail": false,
+    "autoVerifyPhone": false
+  }
+}
