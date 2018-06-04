@@ -24,12 +24,11 @@ var query = function( sql, args ) {
 }
 
 module.exports = {
-  createNewUser(sub, username, email) {
+  createNewUser(username, email) {
     return query('INSERT INTO user'+
-      '(sub, username, email, join_date, teir, send_limit)'+
-      'values (?,?,?,CURDATE(),?,?)', 
-      [ sub, 
-        username,
+      '(username, email, join_date, teir, send_limit)'+
+      'values (?,?,CURDATE(),?,?)', 
+      [ username,
         email,
         'A',
         100
