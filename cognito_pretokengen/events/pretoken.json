@@ -1,5 +1,6 @@
 {
   "request": {
-      "userAttributes": {"sub":"7a3f577c-2f6c-4634-aef1-c99c2ae4bbd6","event_id":"7e816777-53f6-11e8-8d95-23baf48ffef0","token_use":"access","scope":"openid","auth_time":1525917878,"iss":"https://cognito-idp.us-west-2.amazonaws.com/us-west-2_JLdezwX29","exp":1525921478,"iat":1525917878,"version":2,"jti":"85312977-6a78-4d6e-bd89-f039aeb1e594","client_id":"23oiqmj9b82ts8l2esqlsdqciv","username":"jimmy"}
-    }
+      "userAttributes": {"sub":"7a3f577c-2f6c-4634-aef1-c99c2ae4bbd6","event_id":"7e816777-53f6-11e8-8d95-23baf48ffef0","token_use":"access","scope":"openid","auth_time":1525917878,"iss":"https://cognito-idp.us-west-2.amazonaws.com/us-west-2_JLdezwX29","exp":1525921478,"iat":1525917878,"version":2,"jti":"85312977-6a78-4d6e-bd89-f039aeb1e594","client_id":"23oiqmj9b82ts8l2esqlsdqciv","username":"test1122"}
+    },
+    "userName": "test1122"
 }

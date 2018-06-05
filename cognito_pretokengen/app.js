@@ -2,24 +2,24 @@ let mysql = require("mysql");
 var db = require("./db");
 
 exports.lambda_handler = async (event, context, callback) => {
-  console.log(event.request.userAttributes.sub);
-  await db.getUserBySub(event.request.userAttributes.sub)
+  await db.getUserByUsername(event.userName)
   .then((row) => {
-    var claimsMods = {
+    event.response = {
       "claimsOverrideDetails": {
         "claimsToAddOrOverride": {
-          "userid": row[0].id
+          "dbid": row[0].id
         }
       }
     };
-    console.log(row);
 
-    context.done(null, claimsMods);
+    db.disconnect();
+    context.done(null, event);
   })
   .catch((err) => {
+    db.disconnect();
     context.done("Unable to find user.", null);
   });
 
-  console.log(event.request);
-  context.done(null, "didnt make it");
+  db.disconnect();
+  context.done("Something went wrong", null);
 };
